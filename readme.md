@@ -1,3 +1,4 @@
+# Git Workflow Web / Bonnes pratiques
 ### 3 branches d'environnements :
 1. Master (Développement)
 2. Staging (Contrôle Qualité & Test)
