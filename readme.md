@@ -17,8 +17,17 @@ Utiliser des branches d'environnement et déployer à partir de ces branches sig
 ### Le Workflow
 Le déploiement fait entièrement partie du workflow de développement.
 Le workflow intègre 3 environnements de développement: **Development**, **Staging** et **Production**.
-* Les développeurs travaillent sur des bugs ou des features (fonctionnalités) dans des branches séparées. Les mises à jour vraiment mineures peuvent être committer directement dans la branche stable de développement (**master**).
-* Une fois qu'une feature est créée, elle est fusionné (merge) avec la branche staging et déployé dans l'environnement Staging pour le Contrôle Qualité et Tests (quality assurance and test).
+
+* Les développeurs travaillent sur des bugs ou des features (fonctionnalités) dans des branches séparées. Les mises à jour vraiment mineures peuvent être committé directement dans la branche stable de développement (**master**).
+(ex: corriger un caractère accentué.)
+* Une fois qu'une feature est créée,
+ 1. elle est publiée sur GitHub (**publish**)
+ 2. une Pull Request est demandé (**bouton vert avec les flèches**).
+ 3. on attribue un label vert *needs review*.
+ 4. On travaille en binôme, donc une seule autre personne est choisie pour la Pull Request.
+ 5. celui qui fait l'analyse du code peut le commenter tout au long et celui qui implémente la feature ou le bugfix peut modifier le code sur la branche et faire des pushs pour afficher les modifications.
+ 6. une fois l'analyse du code finie, on change le label **needs review** à **reviewed**
+ 7. A partir de github, on finit le Pull Request en fusionnant la branche (merge) sur la branche staging pour le Contrôle Qualité et Tests (quality assurance and test).
 * Après avoir été testée, la feature est fusionnée dans la branche de développement (master).
 * La branche de développement (master) est fusionnée avec la branche production qui est déployée dans l'environnement Production
 
